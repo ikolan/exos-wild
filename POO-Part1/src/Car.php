@@ -18,12 +18,14 @@ class Car
 
     public function forward(): void
     {
-        $this->currentSpeed += $this->currentSpeed > 0 ? 1 : 0;
+        $this->currentSpeed = $this->currentSpeed > 0 ? 50 : 0;
     }
 
     public function break(): void
     {
-        $this->currentSpeed -= $this->currentSpeed > 0 ? 1 : 0;
+        while ($this->currentSpeed > 0) {
+            $this->currentSpeed--;
+        }
     }
 
     public function start(): void
