@@ -7,8 +7,8 @@ $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $recipe = [
-        "title" => $_POST["title"],
-        "description" => $_POST["description"]
+        "title" => trim($_POST["title"]),
+        "description" => trim($_POST["description"])
     ];
 
     if (empty($recipe["title"])) {
