@@ -24,7 +24,7 @@
     <?php endif ?>
 
     <div>
-        <form method="POST">
+        <form method="POST" action="/add">
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" maxlength="255" required>

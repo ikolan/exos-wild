@@ -26,7 +26,7 @@ function getRecipeById(int $id): array
 
     $recipe = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $recipe;
+    return $recipe ? $recipe : [];
 }
 
 function saveRecipe(array $recipe): void
