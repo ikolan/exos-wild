@@ -1,8 +1,10 @@
 <?php
     $presentTime = new DateTime();
     $destinationTime = new DateTime();
-    $destinationTime->setDate(2102, 1, 1);
+    $destinationTime->setDate(2030, 1, 1);
     $destinationTime->setTime(21, 45);
+
+    $diffTime = date_diff($presentTime, $destinationTime);
 ?>
 
 <?php function timeBlockDisplay(string $name, string $value, bool $isOrange) {?>
@@ -41,6 +43,9 @@
         <?php
             timeBlock($destinationTime, true, "Destination time");
             timeBlock($presentTime, false, "Present time");
+
+            echo "Intervale de :<br/>";
+            echo $diffTime->format("%y années, %m mois, %d jours, %H heures, %I minutes et %S secondes.");
         ?>
     </body>
 </html>
