@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.timeBlock {
+  background-color: gray;
+}
+
+.timeBlock > .date {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.timeBlock > .name {
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+.timeBlock .display {
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.timeBlock .display > p {
+  margin: 3px 0;
+  padding: 3px;
+  text-transform: uppercase;
+}
+
+.timeBlock .display > p.name {
+  background-color: red;
+  color: white;
+}
+
+.timeBlock .display > p.ledGreen {
+  background-color: black;
+  color: green;
+}
+
+.timeBlock .display > p.ledOrange {
+  background-color: black;
+  color: orange;
+}
